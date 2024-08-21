@@ -70,4 +70,4 @@ jobs:
     #   uses: gradle/actions/dependency-submission@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
     - name: building gradle
-      run: chmod +x ./gradlew | ./gradlew build
+      run: ls -l ./gradlew | chmod +x ./gradlew | ./gradlew build
