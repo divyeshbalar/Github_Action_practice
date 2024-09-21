@@ -1,0 +1,21 @@
+docker pull postgres
+docker run -p 5432:5432 --name pg-docker -e POSTGRES_PASSWORD=password -d postgres
+docker exec -it pg-docker /bin/bash
+psql -U postgres
+ALTER USER postgres PASSWORD 'password';
+psql -U postgres -d employee_management_system
+create database employee_management_system
+insert into employees (id, email_id, last_name, first_name) values (1, 'divyesh@gmail.com', 'balar', 'divyesh');
+insert into employees (id, email_id, last_name, first_name) values (2, 'frank@gmail.com', 'balar', 'frank');
+insert into employees (id, email_id, last_name, first_name) values (3, 'nitin@gmail.com', 'balar', 'nitin');
+insert into employees (id, email_id, last_name, first_name) values (4, 'yash@gmail.com', 'javiya', 'yash');
+
+
+#Angular setup
+
+npm install -g @angular/cli
+ng new springBootAngularFrontend
+ng serve
+
+How to create angular typescript class?
+ng g class employee
